@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="card h-100">
+      <div class="image" *ngFor="let image of selected_prod.images">
+        <br>
+          <img [src]="image" class="card-img-top" [alt]="selected_prod.title">
+      </div>
+      <div class="stock">
+          <p [ngStyle]="{'color': selected_prod.stock | Stockcolor}">{{selected_prod.stock | Stockpipe}}</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{selected_prod.title | lowercase}} </h5>
+        <p class="card-text">
+          {{selected_prod.description}}
+        </p>
+        <p class="card-text">
+          {{selected_prod.price}} $
+        </p>
+        <button class="btn btn-primary" (click)="redirectToCart(selected_prod.id)">Add To Cart</button>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">{{selected_prod.createdAt | date : 'MMMM YYYY' }}</small>
+      </div>
+    </div>
+</div>

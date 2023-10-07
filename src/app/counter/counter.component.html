@@ -1,0 +1,20 @@
+
+<ul class="list-group" *ngFor="let product of Cart">
+  <li class="list-group-item ">
+    <p>{{product.title}}
+    </p>
+    <div class="d-flex align-items-center buttons">
+      <button class="btn btn-danger" (click)="removeFromCart(product)">-</button>
+      <h4 class="mx-4 mb-0">{{product.quantity}}</h4>
+      <button class="btn btn-success" (click)="addtoCart(product)">+</button>
+    </div>
+  </li>
+</ul>
+
+<div>
+  <strong>Total amount</strong>
+  <strong>
+    <p class="mb-0">(including VAT)</p>
+  </strong>
+</div>
+<span><strong>{{ totalPrice }}</strong></span>

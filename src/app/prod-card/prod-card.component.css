@@ -1,0 +1,12 @@
+image{
+    height: 300px;
+    object-fit: cover;
+}
+img{
+    height: 300px;
+    object-fit: cover;
+}
+.stock p{
+    margin: 5px; 
+    color: green;
+}

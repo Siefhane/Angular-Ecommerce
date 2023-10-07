@@ -1,0 +1,17 @@
+li > a.active { color: #F97924 }
+.cart{
+    width: 25px;
+    height: 25px;
+}
+.counter{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(177, 16, 16);
+    position: relative;
+    bottom: 35px ;
+    right: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+}

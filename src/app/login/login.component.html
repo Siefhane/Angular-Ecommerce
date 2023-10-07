@@ -1,0 +1,52 @@
+
+<form [formGroup]="loginform" (ngSubmit)="submitloginForm()">
+  <div class="mb-3">
+    <label for="email_input" class="form-label">Email</label>
+    <input
+      type="text"
+      class="form-control"
+      id="email_input"
+      aria-describedby="email_input_help"
+      formControlName="email"
+    />
+    <div
+      id="email_input_help"
+      *ngIf="
+        loginform.controls['email'].touched &&
+        loginform.controls['email'].invalid
+      "
+      class="form-text text-danger"
+    >
+      <small *ngIf="loginform.controls['email'].errors?.['required']"
+        >This field is required</small
+      >
+      <small *ngIf="loginform.controls['email'].errors?.['pattern']"
+        >the email must be like (example@example.com)</small
+      >
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="password_input" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password_input"
+      formControlName="password"
+    />
+    <div
+      id="email_input_help"
+      *ngIf="
+        loginform.controls['password'].touched &&
+        loginform.controls['password'].invalid
+      "
+      class="form-text text-danger"
+    >
+      <small *ngIf="loginform.controls['password'].errors?.['required']"
+        >This field is required</small
+      >
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="loginform.invalid" >
+    Submit
+  </button>
+</form>

@@ -1,0 +1,13 @@
+image{
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+}
+img{
+width: 50%;
+height: 50%;
+    object-fit: cover;
+}
+.stock p{
+    margin: 5px; 
+}
